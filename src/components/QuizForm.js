@@ -30,7 +30,7 @@ export default class QuizForm extends Component{
                     />
                 <input className="relationship-input"
                     name="relationship"
-                    type="relationship"
+                    type="text"
                     required
                     value={this.state.newQuiz.relationship}
                     placeholder="Spouse, boss, teacher, neighbor, sister, father..."

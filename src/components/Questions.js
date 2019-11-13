@@ -6,8 +6,6 @@ export default function Questions(props){
         return <Question 
                 question_id={question.id}
                 question={question.question}
-                category={question.category.category}
-
                 />
     })    
     return (

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC&display=swap');
+
+body{
+font-family: 'Carrois Gothic SC', sans-serif;
+}
+
 .quiz-form {
   display: block;
   position: center;
@@ -27,4 +33,50 @@
   padding: 10px;
   cursor: pointer;
 
+}
+
+.toggle-new-quiz{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: block;
+  position: center;
+  background-color: green;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.question-container{
+  display: flex;
+  justify-content: space-evenly;
+  position: center
+}
+
+.radio-button-container{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  margin-bottom: 20px
+}
+
+li{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.answer-button{
+  width: 30%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: green;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
