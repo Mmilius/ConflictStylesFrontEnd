@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+
 
 body{
-font-family: 'Carrois Gothic SC', sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 
 .quiz-form {
@@ -69,7 +70,7 @@ li{
 }
 
 .answer-button{
-  width: 30%;
+  width: 80%;
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 15px;
@@ -79,4 +80,5 @@ li{
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
+  position: center
 }

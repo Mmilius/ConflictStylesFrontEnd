@@ -1,52 +1,61 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-export default function Question(props){
+export default function Question(props){ 
+        const {question, category, newQuizResponse, handleChange} = props
 
     return (
-        <form>
         <div className="single-question">
-            <li>{props.question}</li>
-            <p>{props.category}</p>
+            <li>{question}</li>
+            <p>{category}</p>
             <div className="radio-button-container">
             <label> 
             <input className="question-input"
-                    name="never"
+                    name="answer"
                     type="radio"
-                    value="Never"
+                    value="1"
+                    checked={newQuizResponse.answer === "1"}
+                    onChange={handleChange}
                     /> Never
             </label> 
             <label> 
             <input className="question-input"
-                    name="seldom"
+                    name="answer"
                     type="radio"
-                    value="Seldom"
+                    value="2"
+                    checked={newQuizResponse.answer === "2"}
+                    onChange={handleChange}
                     /> Seldom
             </label> 
             <label> 
             <input className="question-input"
-                    name="sometimes"
+                    name="answer"
                     type="radio"
-                    value="Sometimes"
+                    value="3"
+                    checked={newQuizResponse.answer === "3"}
+                    onChange={handleChange}
                     /> Sometimes
             </label> 
             <label> 
             <input className="question-input"
-                    name="often"
+                    name="answer"
                     type="radio"
-                    value="Often"
+                    value="4"
+                    checked={newQuizResponse.answer === "4"}
+                    onChange={handleChange}
                     /> Often
             </label> 
             <label> 
             <input className="question-input"
-                    name="always"
+                    name="answer"
                     type="radio"
-                    value="Always"
+                    value="5"
+                    checked={newQuizResponse.answer === "5"}
+                    onChange={handleChange}
                     /> Always
             </label> 
             </div>
         </div>
-        <button className="answer-button" type="submit">Submit Answer</button> 
-        </form>
+     
     )
 
 
