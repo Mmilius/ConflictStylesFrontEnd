@@ -153,3 +153,19 @@ label
   font-weight: bold;
   font-size: 35px;
 }
+
+.style-headline{
+  list-style: none
+}
+
+.style-image{
+  width: 250px;
+  float: right;
+
+}
+
+.instructions{
+  display: flex;
+  justify-content: space-evenly;
+  position: center
+}
