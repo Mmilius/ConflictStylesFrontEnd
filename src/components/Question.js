@@ -1,10 +1,26 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-export default function Question(props){ 
-        const {question, category, newQuizResponse, handleChange} = props
+export default class Question extends Component{ 
+        state = {
+                newQuizResponse: {
+                question_id: "",
+                answer: ""
+                }
+        }
 
+handleChange = event => {
+        const newQuizResponse = this.state.newQuizResponse
+        const {name, value} = event.target
+        newQuizResponse[name] = value
+        this.setState({newQuizResponse})
+      }
+
+render() {
+        const {question, category} = this.props
+      
     return (
         <div className="single-question">
+                <form>
             <li>{question}</li>
             <p>{category}</p>
             <div className="radio-button-container">
@@ -13,8 +29,8 @@ export default function Question(props){
                     name="answer"
                     type="radio"
                     value="1"
-                    checked={newQuizResponse.answer === "1"}
-                    onChange={handleChange}
+                    checked={this.state.newQuizResponse.answer === "1"}
+                    onChange={this.handleChange}
                     /> Never
             </label> 
             <label> 
@@ -22,8 +38,8 @@ export default function Question(props){
                     name="answer"
                     type="radio"
                     value="2"
-                    checked={newQuizResponse.answer === "2"}
-                    onChange={handleChange}
+                    checked={this.state.newQuizResponse.answer === "2"}
+                    onChange={this.handleChange}
                     /> Seldom
             </label> 
             <label> 
@@ -31,8 +47,8 @@ export default function Question(props){
                     name="answer"
                     type="radio"
                     value="3"
-                    checked={newQuizResponse.answer === "3"}
-                    onChange={handleChange}
+                    checked={this.state.newQuizResponse.answer === "3"}
+                    onChange={this.handleChange}
                     /> Sometimes
             </label> 
             <label> 
@@ -40,8 +56,8 @@ export default function Question(props){
                     name="answer"
                     type="radio"
                     value="4"
-                    checked={newQuizResponse.answer === "4"}
-                    onChange={handleChange}
+                    checked={this.state.newQuizResponse.answer === "4"}
+                    onChange={this.handleChange}
                     /> Often
             </label> 
             <label> 
@@ -49,15 +65,14 @@ export default function Question(props){
                     name="answer"
                     type="radio"
                     value="5"
-                    checked={newQuizResponse.answer === "5"}
-                    onChange={handleChange}
+                    checked={this.state.newQuizResponse.answer === "5"}
+                    onChange={this.handleChange}
                     /> Always
             </label> 
             </div>
+            </form>
         </div>
      
     )
-
-
-
+}
 }

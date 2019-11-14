@@ -30,7 +30,7 @@ body{
 
 .submit-button{
   display: block;
-  background-color: green;
+  background-color:#3f837f;
   padding: 10px;
   cursor: pointer;
 
@@ -45,7 +45,7 @@ body{
   box-sizing: border-box;
   display: block;
   position: center;
-  background-color: green;
+  background-color:#3f837f;
   font-size: 25px;
   color: white;
   cursor: pointer;
@@ -75,10 +75,53 @@ li{
   border: 1px solid #ccc;
   border-radius: 15px;
   box-sizing: border-box;
-  background-color: green;
+  background-color: #3f837f;
   font-size: 20px;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
   position: center
 }
+
+.question-input{
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #f1f1f1;
+  color: #666;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;     
+  margin-right: 7px;
+  outline: none;
+}
+
+.question-input:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+.question-input:hover
+{
+     background-color: #f7f7f7;
+}
+.question-input:checked
+{
+     background-color: #cce9f4
+}
+label
+{
+     font: 15px/1.7 'Open Sans', sans-serif;
+     color: #333;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     cursor: pointer;
+} 
+

@@ -9,20 +9,6 @@ export default class App extends Component{
   state = {
     questions: [],
     isNewQuizFormShowing: false,
-
-    newQuizResponse: {
-      question_id: "",
-      answer: ""
-    }
-  }
-
-
-  handleChange = event => {
-    const newQuizResponse = this.state.newQuizResponse
-    const {name, value} = event.target
-
-    newQuizResponse[name] = value
-    this.setState({newQuizResponse})
   }
 
 componentDidMount(){
@@ -41,7 +27,7 @@ toggleNewForm = () => {
 
 render () {
 
-const {questions, isNewQuizFormShowing, newQuizResponse} = this.state
+const {questions, isNewQuizFormShowing} = this.state
 
   return (
     <div className="App">
@@ -68,8 +54,8 @@ const {questions, isNewQuizFormShowing, newQuizResponse} = this.state
         <ol>
           <Questions 
             questions = {questions}
-            newQuizResponse = {newQuizResponse}
-            handleChange={this.handleChange}
+            // newQuizResponse = {newQuizResponse}
+            // handleChange={this.handleChange}
           />
         </ol>
       </section>
