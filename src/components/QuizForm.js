@@ -1,13 +1,23 @@
 import React, {Component} from 'react'
 import "../App.css"
+import Questions from "./Questions"
 
 export default class QuizForm extends Component{
     state = {
         newQuiz: {
             userName: "",
-        relationship: "",
+        relationship: ""},
+        questions: []
     }
-    }
+    
+
+    componentDidMount(){
+        fetch('http://localhost:3000/questions')
+        .then(response => response.json())
+        .then(questions => {
+          this.setState({questions})
+        })
+      }
 
     handleChange = event => {
         const newQuiz = this.state.newQuiz
@@ -17,6 +27,9 @@ export default class QuizForm extends Component{
 
 
     render() {
+
+        const {questions} = this.state
+
         return (
             <div>
             <form className="quiz-form" onSubmit={this.submitHandler}>
@@ -33,13 +46,15 @@ export default class QuizForm extends Component{
                     type="text"
                     required
                     value={this.state.newQuiz.relationship}
-                    placeholder="Spouse, boss, teacher, neighbor, sister, father..."
+                    placeholder="Spouse, girlfriend, boss, teacher, neighbor, sister, father..."
                     onChange={this.handleChange}
                     />
-
-                <input type="submit" className="submit-button" value={this.props.submitLabel}/>
             </form>
-            </div>
+
+              <section className="quiz-list">
+              <Questions questions = {questions} /> 
+          </section>
+          </div>
         )
     }
 }

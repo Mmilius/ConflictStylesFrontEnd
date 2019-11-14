@@ -1,15 +1,24 @@
 import React, {Component} from 'react';
 import "./App.css"
+import Questions from './components/Questions'
 import QuizForm from './components/QuizForm';
 import Nav from './Nav.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Categories from './Categories'
+
 
 export default class App extends Component{
   state = {
+    questions: [],
     isNewQuizFormShowing: false,
-    categories: []
   }
+
+componentDidMount(){
+  fetch('http://localhost:3000/questions')
+  .then(response => response.json())
+  .then(questions => {
+    this.setState({questions})
+  })
+}
 
 toggleNewForm = () => {
   this.setState({
@@ -17,23 +26,16 @@ toggleNewForm = () => {
   })
 }
 
-componentDidMount(){
-  fetch('http://localhost:3000/categories')
-  .then(response => response.json())
-  .then(categories => {
-    this.setState({categories})
-  })
-}
+
 
 render () {
 
-const {isNewQuizFormShowing, categories} = this.state
+const {questions, isNewQuizFormShowing} = this.state
 
   return (
     <Router>
     <div className="App">
       <Nav />
-      <main>
       <button className="toggle-new-quiz" onClick={this.toggleNewForm}> 
         <span>
         {
@@ -47,16 +49,21 @@ const {isNewQuizFormShowing, categories} = this.state
         isNewQuizFormShowing
           ? (
             <section>
-            <h2 className="quiz-title">New Quiz</h2>
-            <QuizForm />
+            <h2>New Quiz</h2>
+            <QuizForm/>
             </section>
           )
           : null
       }
-  </main>
-  <div>
-    <Route path="/styles" render={(props) => <Categories categories = {categories}/>}/>
-  </div>
+      <section className="quiz-list">
+          <Questions 
+            questions = {questions}
+            // newQuizResponse = {newQuizResponse}
+            // handleChange={this.handleChange}
+          />
+        
+      </section>
+
     </div>
     </Router>
   );

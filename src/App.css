@@ -24,35 +24,35 @@ nav{
 }
 
 .quiz-form {
-  display: block;
-  position: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 50%
+  width: 100%
  
 }
 
 .user-name-input{
-  display: flex;
-  justify-content: space-around;
-  margin: 5px;
   padding: 15px;
+  width: 40%;
+  border-color: black;
+  font-size: 15px
 }
 
 .relationship-input{
-  margin: 5px;
-  display: flex;
-  justify-content: space-around;
-  padding: 15px
+  padding: 15px;
+  width: 40%;
+  border-color: black;
+  font-size: 15px
 }
 
-.submit-button{
-  display: block;
+/* .submit-button{
   background-color:#3f837f;
-  padding: 10px;
   cursor: pointer;
-
-}
+  display: flex;
+  justify-content: space-evenly;
+  position: center;
+} */
 
 .toggle-new-quiz{
   width: 100%;
@@ -89,16 +89,19 @@ li{
 
 .answer-button{
   width: 80%;
-  padding: 5px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 15px;
   box-sizing: border-box;
   background-color: #3f837f;
-  font-size: 20px;
+  font-size: 30px;
   color: white;
   cursor: pointer;
+  margin-top: 10px;
   margin-bottom: 10px;
-  position: center
+  display: flex;
+  justify-content: space-evenly;
+  position: center;
 }
 
 .question-input{
@@ -143,3 +146,10 @@ label
      cursor: pointer;
 } 
 
+.quiz-title{
+  display: flex;
+  justify-content: space-evenly;
+  position: center;
+  font-weight: bold;
+  font-size: 35px;
+}
