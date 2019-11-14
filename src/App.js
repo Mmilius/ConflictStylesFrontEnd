@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 import "./App.css"
 import Questions from './components/Questions'
 import QuizForm from './components/QuizForm';
+import Nav from './Nav.js'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-// import QuizForm from './components/QuizForm'
 
 export default class App extends Component{
   state = {
@@ -25,12 +26,16 @@ toggleNewForm = () => {
   })
 }
 
+
+
 render () {
 
 const {questions, isNewQuizFormShowing} = this.state
 
   return (
+    <Router>
     <div className="App">
+      <Nav />
       <button className="toggle-new-quiz" onClick={this.toggleNewForm}> 
         <span>
         {
@@ -51,16 +56,16 @@ const {questions, isNewQuizFormShowing} = this.state
           : null
       }
       <section className="quiz-list">
-        <ol>
           <Questions 
             questions = {questions}
             // newQuizResponse = {newQuizResponse}
             // handleChange={this.handleChange}
           />
-        </ol>
+        
       </section>
 
     </div>
+    </Router>
   );
 } 
 }

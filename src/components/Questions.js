@@ -20,13 +20,11 @@ export default function Questions(props){
     return (
             <div className="question-container">
                 
-                <form onSubmit={handleFormSubmit}> 
+              
                 <ol>
                     {questionList()}
+                    <button className="answer-button" type="submit">Submit Quiz</button>  
                 </ol>
-                <button className="answer-button" type="submit">Submit Quiz</button>  
-                </form> 
-
             </div>
     )
 }

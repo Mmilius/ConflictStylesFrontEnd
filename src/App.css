@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
 body{
   font-family: 'Heebo', sans-serif;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40px;
+  background-color: #383434;
+  color: white;
+}
+
+.nav-list{
+  list-style: none
+}
+
+.headline{
+  font-size: 50px;
+  font-family: 'Russo One', sans-serif;
 }
 
 .quiz-form {

@@ -16,13 +16,13 @@ handleChange = event => {
       }
 
 render() {
-        const {question, category} = this.props
+        const {question, category, handleFormSubmit} = this.props
       
     return (
         <div className="single-question">
-                <form>
+                <form onSubmit={handleFormSubmit}>
             <li>{question}</li>
-            <p>{category}</p>
+            <p>{category}</p> 
             <div className="radio-button-container">
             <label> 
             <input className="question-input"
