@@ -27,9 +27,11 @@ componentDidMount(){
   })
 }
 
+
 render () {
 
 const {categories} = this.state
+
 
   return (
     <Router>
@@ -39,7 +41,8 @@ const {categories} = this.state
         <Route path="/" exact component={Home}/>
         <Route path="/quiz" exact component={QuizForm} />
         <Route path="/styles" exact render={(props) => <Categories categories = {categories}/>}/>
-        <Route path="/success" exact component={Success}/>
+        <Route path="/success" exact render={(props) => <Success categories = {categories}/>}/>
+        {/* <Route path="/success" exact component={Success}/> */}
         </Switch>
          </div>
     </Router>

@@ -12,12 +12,19 @@ nav{
   min-height: 40px;
   background-color: #383434;
   color: white;
+  text-decoration-line: none;
 }
 
 .nav-list{
   list-style: none;
   color: white;
   text-decoration: none;
+  margin-left: 15px;
+  text-decoration-line: none;
+}
+.nav-list:hover{
+  color: #3f837f;
+  text-decoration-line: none;
 }
 
 .headline{
@@ -111,7 +118,7 @@ li{
   display: inline-block;
   position: relative;
   background-color: #f1f1f1;
-  color: #666;
+  color:white;
   top: 10px;
   height: 30px;
   width: 30px;
@@ -137,7 +144,7 @@ li{
 }
 .question-input:checked
 {
-     background-color: #cce9f4
+     background-color:  #3f837f
 }
 label
 {
@@ -163,13 +170,16 @@ label
 
 .style-title{
   color:  #3f837f;
-  text-decoration: underline;
+  text-decoration-line: overline;
+  margin-top: 15px
 
 }
+
 
 .style-image{
   width: 250px;
   float: right;
+  margin-right: 35px
 
 }
 
@@ -182,7 +192,14 @@ label
 .nav-links{
   color: white;
   text-decoration: none;
-
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-between;
+  text-decoration-line: none;
+}
+a{
+  color: white;
+  text-decoration-line: none;
 }
 
 .fight{
