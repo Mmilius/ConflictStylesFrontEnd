@@ -5,7 +5,7 @@ import Questions from "./Questions"
 export default class QuizForm extends Component{
     state = {
         newQuiz: {
-            userName: "",
+        userName: "",
         relationship: ""},
         questions: []
     }

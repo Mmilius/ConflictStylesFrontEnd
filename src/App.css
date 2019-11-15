@@ -30,6 +30,7 @@ nav{
 .headline{
   font-size: 50px;
   font-family: 'Russo One', sans-serif;
+  padding: 2px
 }
 
 .quiz-form {

@@ -20,8 +20,6 @@ export default function Questions(props){
 
     return (
             <div className="question-container">
-                
-              
                 <ol>
                     {questionList()}
                     <Link className="quiz-result-button" to="/success">Submit Quiz</Link>

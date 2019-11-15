@@ -32,7 +32,6 @@ render () {
 
 const {categories} = this.state
 
-
   return (
     <Router>
     <div className="App">
@@ -42,7 +41,6 @@ const {categories} = this.state
         <Route path="/quiz" exact component={QuizForm} />
         <Route path="/styles" exact render={(props) => <Categories categories = {categories}/>}/>
         <Route path="/success" exact render={(props) => <Success categories = {categories}/>}/>
-        {/* <Route path="/success" exact component={Success}/> */}
         </Switch>
          </div>
     </Router>

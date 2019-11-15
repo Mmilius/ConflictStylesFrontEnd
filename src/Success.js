@@ -22,18 +22,6 @@ export default function Success(props){
             <div className="result-container">
                 <h1>Your Conflict Style Is...</h1>
             <p>{randomResult(categoryList)}</p>
-            
-        
-            {/* <p> Viewed as having a calm and quiet presence.</p>
-            <ul className="result-list">
-                <li>Driven by fear.</li>
-                <li>Attempts to disempower others.</li>
-                <li>Refuses to communicate.</li>
-                <li>Withdraws or removes themselves from the conflict.</li>
-                <li>Denies problems. Pretends nothing is wrong.</li>
-            </ul>
-         <p>Uses: When confrontation is dangerous or hostile. When time or space is needed to prepare a resolution.</p>
-        <p>Limits: Issues remain unresolved and resurface.</p> */}
             </div>
     )
 
