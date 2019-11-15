@@ -7,14 +7,6 @@ Everyone has a dominate style(s) when addressing conflict. An individual's style
 Take the quiz. Learn about styles. Restore peace. 
 
 
-![Homepage](/Users/mmilius/Desktop/Development/Mod4/finalFrontend/conflict-styles-quiz/public/conflict.homepage.png)
-
-<br>
-<br> 
-
-![Quiz](/Users/mmilius/Desktop/Development/Mod4/finalFrontend/conflict-styles-quiz/public/conflict.quiz.png)
-
-
 <h2>Getting Started</h2>
 Clone down this repository and the BackEnd respository. 
 
