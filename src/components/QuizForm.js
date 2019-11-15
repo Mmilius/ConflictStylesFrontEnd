@@ -32,6 +32,7 @@ export default class QuizForm extends Component{
 
         return (
             <div>
+                 <h2 className="quiz-title">New Quiz</h2>
                 <h3 className="instructions">Think of someone with whom you have had a conflict, disagreement, argument, or disappointment.</h3>
             <form className="quiz-form" onSubmit={this.submitHandler}>
                 <input className="user-name-input"

@@ -15,7 +15,9 @@ nav{
 }
 
 .nav-list{
-  list-style: none
+  list-style: none;
+  color: white;
+  text-decoration: none;
 }
 
 .headline{
@@ -152,10 +154,17 @@ label
   position: center;
   font-weight: bold;
   font-size: 35px;
+  color:  #3f837f
 }
 
 .style-headline{
-  list-style: none
+  list-style: none;
+}
+
+.style-title{
+  color:  #3f837f;
+  text-decoration: underline;
+
 }
 
 .style-image{
@@ -168,4 +177,43 @@ label
   display: flex;
   justify-content: space-evenly;
   position: center
+}
+
+.nav-links{
+  color: white;
+  text-decoration: none;
+
+}
+
+.fight{
+  width: 100%;
+}
+
+.quiz-result-button{
+  color: white;
+  text-decoration: none;
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: #3f837f;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  position: center;
+
+}
+
+.result-container{
+ margin-left: 80px;
+
+}
+
+.result-list > li{
+  font-size: 15px;
 }

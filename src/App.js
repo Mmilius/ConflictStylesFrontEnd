@@ -4,18 +4,20 @@ import QuizForm from './components/QuizForm';
 import Nav from './Nav.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Categories from './Categories'
+import Home from './Home'
+import Success from './Success'
 
 export default class App extends Component{
   state = {
-    isNewQuizFormShowing: false,
+    // isNewQuizFormShowing: false,
     categories: []
   }
 
-toggleNewForm = () => {
-  this.setState({
-    isNewQuizFormShowing: !this.state.isNewQuizFormShowing
-  })
-}
+// toggleNewForm = () => {
+//   this.setState({
+//     isNewQuizFormShowing: !this.state.isNewQuizFormShowing
+//   })
+// }
 
 componentDidMount(){
   fetch('http://localhost:3000/categories')
@@ -27,37 +29,19 @@ componentDidMount(){
 
 render () {
 
-const {isNewQuizFormShowing, categories} = this.state
+const {categories} = this.state
 
   return (
     <Router>
     <div className="App">
       <Nav />
-      <main>
-      <button className="toggle-new-quiz" onClick={this.toggleNewForm}> 
-        <span>
-        {
-          isNewQuizFormShowing
-            ? "-"
-            : "Take New Quiz"
-        }
-        </span>
-      </button>
-      {
-        isNewQuizFormShowing
-          ? (
-            <section>
-            <h2 className="quiz-title">New Quiz</h2>
-            <QuizForm />
-            </section>
-          )
-          : null
-      }
-  </main>
-  <div>
-    <Route path="/styles" render={(props) => <Categories categories = {categories}/>}/>
-  </div>
-    </div>
+      <Switch>
+        <Route path="/" exact component={Home}/>
+        <Route path="/quiz" exact component={QuizForm} />
+        <Route path="/styles" exact render={(props) => <Categories categories = {categories}/>}/>
+        <Route path="/success" exact component={Success}/>
+        </Switch>
+         </div>
     </Router>
   );
 } 

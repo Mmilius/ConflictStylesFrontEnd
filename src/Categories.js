@@ -6,12 +6,12 @@ export default function Categories(props){
       const {categories} = props
       return categories.map(category => {
       return <li className="style-headline">
-          <h2>{category.category}</h2>
+          <h2 className="style-title">{category.category}</h2>
           <img className="style-image" src={category.image}></img>
           <p>{category.description}</p>
           <p>{category.bullets}</p>
-          <p>{category.uses}</p>
-          <p>{category.limits}</p>
+          <p>Uses: {category.uses}</p>
+          <p>Limits: {category.limits}</p>
           {/* <img className="style-image" src={category.image}></img> */}
       </li>
   })    
